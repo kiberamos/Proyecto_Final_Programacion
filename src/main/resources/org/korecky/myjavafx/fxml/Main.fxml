@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.korecky.myjavafx.fxml.MainController">
+   <children>
+      <TabPane prefHeight="603.0" prefWidth="929.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Welcome Tab">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="New Book">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="104.0" layoutY="32.0" text="Title">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="94.0" layoutY="102.0" text="Author">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="97.0" layoutY="178.0" text="Genre">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="93.0" layoutY="256.0" text="Publisher">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="59.0" layoutY="384.0" text="Edition Number">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="193.0" layoutY="445.0" text="Year">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="182.0" layoutY="487.0" text="Month">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="txttitle" layoutX="210.0" layoutY="28.0" prefHeight="41.0" prefWidth="220.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtauthor" layoutX="208.0" layoutY="98.0" prefHeight="38.0" prefWidth="222.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtgenre" layoutX="206.0" layoutY="174.0" prefHeight="38.0" prefWidth="222.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtpublisher" layoutX="210.0" layoutY="252.0" prefHeight="38.0" prefWidth="222.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtnumber" layoutX="236.0" layoutY="376.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <ComboBox fx:id="cmbyear" layoutX="273.0" layoutY="448.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cmbmonth" layoutX="273.0" layoutY="490.0" prefWidth="150.0" />
+                        <TextArea layoutX="526.0" prefHeight="551.0" prefWidth="389.0" style="-fx-background-color: grey;" stylesheets="@../css/Main.css" text="&#10;Aqui se ingresa el titulo de la revista&#10;&#10;&#10;Aqui se ingresa el autor de la revista&#10;&#10;&#10;Aqui se ingresa el Genero de la Revista&#10;&#10;&#10;Aqui se ingresa el Publicador de la Revista&#10;&#10;Se puede ingresar los numeros de edicion &#10;que se requiera&#10;&#10;Aqui se ingresa el numero de Edicion&#10;de la Revista&#10;&#10;Aqui se va a ingresar el ano y el mes que &#10;el libro es enviado">
+                           <font>
+                              <Font size="17.0" />
+                           </font></TextArea>
+                        <Button fx:id="btnregistrar" layoutY="545.0" mnemonicParsing="false" text="Submit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnregedicion" layoutX="296.0" layoutY="533.0" mnemonicParsing="false" text="Add new Edition" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Revistas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnactualizar" layoutX="439.0" layoutY="545.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" text="Actualizar" />
+                        <TableView fx:id="tblvw" prefHeight="545.0" prefWidth="929.0">
+                           <columns>
+                              <TableColumn fx:id="titlecolumn" prefWidth="216.0" text="Title" />
+                              <TableColumn fx:id="authorcolumn" prefWidth="150.0" text="Author" />
+                              <TableColumn fx:id="genrecolumn" prefWidth="135.0" text="Genre" />
+                              <TableColumn fx:id="publishercolumn" prefWidth="141.0" text="Publisher" />
+                              <TableColumn fx:id="numbercolumn" prefWidth="286.0" text="Edition" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Literal A">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cmbyeara" layoutX="191.0" layoutY="68.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cmbmontha" layoutX="514.0" layoutY="68.0" prefWidth="150.0" />
+                        <Label layoutX="126.0" layoutY="72.0" text="Year" />
+                        <Label layoutX="471.0" layoutY="72.0" text="Month" />
+                        <TableView fx:id="tblvwa" layoutY="168.0" prefHeight="408.0" prefWidth="929.0">
+                          <columns>
+                            <TableColumn fx:id="titleacolumn" prefWidth="216.0" text="Title" />
+                            <TableColumn fx:id="authoracolumn" prefWidth="150.0" text="Author" />
+                              <TableColumn fx:id="genreacolumn" prefWidth="164.0" text="Genre" />
+                              <TableColumn fx:id="publisheracolumn" prefWidth="144.0" text="Publisher" />
+                              <TableColumn fx:id="numberacolumn" prefWidth="254.0" text="Edition" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnliterala" layoutX="741.0" layoutY="68.0" mnemonicParsing="false" text="Submit" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Literal B">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnliteralb" layoutX="439.0" layoutY="275.0" mnemonicParsing="false" text="Button" />
+                        <ComboBox fx:id="cmbyearb" layoutX="390.0" layoutY="231.0" prefWidth="150.0" />
+                        <TableView fx:id="tblvwb" layoutY="317.0" prefHeight="257.0" prefWidth="929.0">
+                          <columns>
+                            <TableColumn fx:id="monthbcolumn" prefWidth="928.0" text="Months" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Literal C">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cmbyearc" layoutX="69.0" layoutY="275.0" prefWidth="150.0" />
+                        <TextArea fx:id="txtliteralc" layoutX="381.0" prefHeight="575.0" prefWidth="551.0" />
+                        <Button fx:id="btnliteralc" layoutX="283.0" layoutY="275.0" mnemonicParsing="false" text="Submit" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Literal D">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnliterald" layoutX="451.0" layoutY="541.0" mnemonicParsing="false" text="Submit" />
+                        <TextArea fx:id="txtliterald" prefHeight="533.0" prefWidth="929.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Literal E">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cmbyeare" layoutX="346.0" layoutY="76.0" prefWidth="150.0" />
+                        <TableView fx:id="tblvwe" layoutY="133.0" prefHeight="443.0" prefWidth="929.0">
+                          <columns>
+                            <TableColumn fx:id="titleecolumn" prefWidth="211.0" text="Title" />
+                            <TableColumn fx:id="authorecolumn" prefWidth="167.0" text="Author" />
+                              <TableColumn fx:id="genreecolumn" prefWidth="167.0" text="Genre" />
+                              <TableColumn fx:id="publisherecolumn" prefWidth="165.0" text="Publisher" />
+                              <TableColumn fx:id="numberecolumn" prefWidth="84.0" text="Edicion" />
+                              <TableColumn fx:id="yearecolumn" prefWidth="60.0" text="Year" />
+                              <TableColumn fx:id="monthecolumn" prefWidth="74.0" text="Month" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnliterale" layoutX="535.0" layoutY="76.0" mnemonicParsing="false" text="Button" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
